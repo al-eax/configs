@@ -24,3 +24,6 @@ function record(){
 
 
 alias record='record'
+
+export VISUAL=vim
+export EDITOR="$VISUAL"
