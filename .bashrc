@@ -27,3 +27,24 @@ alias record='record'
 
 export VISUAL=vim
 export EDITOR="$VISUAL"
+
+md2pdf () {
+	filename=$1
+	pandoc "$1" -o "${filename/md/pdf}"
+}
+
+webm2mp4 () {
+    filename=$1
+    ffmpeg -i "$1" -qscale 0 "${filename/webm/mp4}"
+}    
+mp42mp3 () {
+      ffmpeg -i "$1".mp4 "$1".mp3
+}
+
+export ssd=/media/alex/SSD
+alias ssd='cd $ssd'
+
+alias mouse="sudo modprobe -r psmouse && sudo modprobe psmouse"
+
+
+
