@@ -15,7 +15,12 @@ alias gcl='git clone'
 
 export GIT_PS1_SHOWDIRTYSTATE=1
 
+#if __git_ps1 unknown command:
 alias __git_ps1='git branch --contains HEAD 2>/dev/null'
+# or 
+#if [ -f /opt/local/share/doc/git-core/contrib/completion/git-prompt.sh ]; then
+#    . /opt/local/share/doc/git-core/contrib/completion/git-prompt.sh
+#fi
 
 export PS1='\[\033[01;32m\]\u@\h\[\033[01;34m\] \w\[\033[01;33m\]$(__git_ps1)\[\033[01;34m\] \$\[\033[00m\] '
 
