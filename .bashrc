@@ -49,7 +49,7 @@ mp42mp3 () {
 
 export ssd=/media/alex/SSD
 alias ssd='cd $ssd'
-
+export EDITOR='vim'
 alias mouse="sudo modprobe -r psmouse && sudo modprobe psmouse"
 
 
