@@ -20,10 +20,9 @@ fu ebrlin
 
 # eduroam - https://www.zedat.fu-berlin.de/WLAN
 wget https://www.zedat.fu-berlin.de/pub/ZEDAT/WLAN/eduroam-linux-eduroam-2019.py
-sudo python3 eduroam-linux-eduroam-2019.py
+python3 eduroam-linux-eduroam-2019.py # !! no sudo !!
 
 # fu berlin vpn - https://www.zedat.fu-berlin.de/tip4u_32.pdf
-
 sudo apt-get install network-manager-openconnect-gnome
 nm-connection-editor 
 # create new cisco vpn
