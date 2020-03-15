@@ -1,3 +1,8 @@
+alias sound='pavucontrol'
+
+export PS1='\[\033[01;32m\]\u@\h\[\033[01;34m\] \w\[\033[01;33m\]$(__git_ps1)\[\033[01;34m\] \$\[\033[00m\] '
+
+
 alias ga='git add'
 alias gp='git push'
 alias gl='git log'
@@ -13,16 +18,16 @@ alias grr='git remote rm'
 alias gpu='git pull'
 alias gcl='git clone'
 
+
+
+
 export GIT_PS1_SHOWDIRTYSTATE=1
 
-#if __git_ps1 unknown command:
-alias __git_ps1='git branch --contains HEAD 2>/dev/null'
-# or 
-#if [ -f /opt/local/share/doc/git-core/contrib/completion/git-prompt.sh ]; then
-#    . /opt/local/share/doc/git-core/contrib/completion/git-prompt.sh
-#fi
 
-export PS1='\[\033[01;32m\]\u@\h\[\033[01;34m\] \w\[\033[01;33m\]$(__git_ps1)\[\033[01;34m\] \$\[\033[00m\] '
+
+
+
+
 
 function record(){
         vlc -I dummy screen:// --screen-fps=2560-quiet --sout "#transcode{vcodec=h264,vb072}:standard{access=file,mux=mp4,dst=/home/alex/Videos/$1.mp4}"
@@ -42,7 +47,7 @@ md2pdf () {
 webm2mp4 () {
     filename=$1
     ffmpeg -i "$1" -qscale 0 "${filename/webm/mp4}"
-}    
+}
 mp42mp3 () {
       ffmpeg -i "$1".mp4 "$1".mp3
 }
@@ -51,6 +56,5 @@ export ssd=/media/alex/SSD
 alias ssd='cd $ssd'
 export EDITOR='vim'
 alias mouse="sudo modprobe -r psmouse && sudo modprobe psmouse"
-
 
 
